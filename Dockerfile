@@ -11,7 +11,6 @@ RUN apt-get install -yqq python3 python3-pip python3-dev build-essential \
 
 ADD scripts /scripts
 
-RUN pip install --upgrade pip
 # RUN pip3 install -U numpy
 COPY requirements.txt /tmp
 WORKDIR /tmp
