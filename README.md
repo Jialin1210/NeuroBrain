@@ -10,7 +10,7 @@ This repo implements the methods proposed in paper https://arxiv.org/abs/1803.02
 ```bash
 git clone git@github.com:Jialin1210/NeuroBrain.git
 
-cd 3DCNN-Vis
+cd NeuroBrain
 
 [sudo] docker build -t neurobrain:repo -f Dockerfile .
 
