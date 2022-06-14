@@ -5,16 +5,16 @@ This repo implements the methods proposed in paper https://arxiv.org/abs/1803.02
  This implemented paper is based on the work [Residual and Plain Convolutional Neural Networks for 3D Brain MRI Classification](https://arxiv.org/abs/1701.06643) and its implementation in this [repo](https://github.com/neuro-ml/resnet_cnn_mri_adni). Please cite properly if you are using code in this repo.
 
 
-### Build and run docker running environment
+### Build and run docker running environment [Changed]
 
 ```bash
-git clone git@github.com:west-gates/3DCNN-Vis.git
+git clone git@github.com:Jialin1210/NeuroBrain.git
 
 cd 3DCNN-Vis
 
-[sudo] docker build -t 3dcnnvis:repo -f Dockerfile .
+[sudo] docker build -t neurobrain:repo -f Dockerfile .
 
-[sudo] nvidia-docker run -it -p 8809:8888 -v ~/path/to/3DCNN-Vis:/scripts/ 3dcnnvis:repo jupyter notebook --no-browser
+[sudo] nvidia-docker run -it -p 8809:8888 -v ~/path/to/NeuroBrain:/scripts/ neurobrain:repo jupyter notebook --no-browser
 ```
 
 Open `http://localhost:8809` on your local machine.
