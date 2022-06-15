@@ -14,8 +14,7 @@ ADD scripts /scripts
 # RUN pip3 install -U numpy
 COPY requirements.txt /tmp
 WORKDIR /tmp
-RUN pip3 install --upgrade pip && pip3 install -U -r requirements.txt
-
+RUN pip3 install --upgrade pip && pip3 install -U -r /tmp/requirements.txt
 EXPOSE 8888
 VOLUME ["/notebook", "/scripts"]
 WORKDIR /scripts
