@@ -9,13 +9,12 @@ RUN apt-get install -yqq python3 python3-pip python3-dev build-essential \
     libfreetype6-dev libpng12-dev pkg-config libxml2-dev libxslt-dev \
     libboost-program-options-dev zlib1g-dev libboost-python-dev
 
-RUN pip3 install --upgrade pip
 ADD scripts /scripts
 
 # RUN pip3 install -U numpy
 COPY requirements.txt /tmp
 WORKDIR /tmp
-RUN pip3 install -U -r requirements.txt
+RUN pip3 install --upgrade pip &$ pip3 install -U -r requirements.txt
 
 EXPOSE 8888
 VOLUME ["/notebook", "/scripts"]
