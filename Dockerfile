@@ -12,13 +12,12 @@ RUN apt-get install -yqq python3 python3-pip python3-dev build-essential \
 ADD scripts /scripts
 
 # RUN pip3 install -U numpy
+RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade setuptools
 COPY requirements.txt /tmp
 WORKDIR /tmp
-RUN pip3 install --upgrade pip &&\
-    pip3 install --upgrade setuptools &&\
-    pip3 install -r /tmp/requirements.txt 
-# RUN pip3 install --upgrade pip && \
-#     pip3 install --r /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt 
+
 EXPOSE 8888
 VOLUME ["/notebook", "/scripts"]
 WORKDIR /scripts
