@@ -4,9 +4,9 @@ FROM nvidia/cuda:11.7.0-devel-ubuntu20.04
 RUN apt-get clean && apt-get update
 RUN apt-get install -yqq python3 python3-pip python3-dev build-essential \
     python3-setuptools python3-numpy python3-scipy \
-    libatlas-dev \
+    libatlas-base-dev \
     git wget gfortran libatlas-base-dev libatlas3-base libhdf5-dev \
-    libfreetype6-dev libpng12-dev pkg-config libxml2-dev libxslt-dev \
+    libfreetype6-dev libpng-dev pkg-config libxml2-dev libxslt-dev \
     libboost-program-options-dev zlib1g-dev libboost-python-dev
 
 ADD scripts /scripts
