@@ -17,7 +17,7 @@ numpy==1.11.2
 pandas==0.19.0
 scikit-image==0.12.3
 scikit-learn==0.18
-scipy==0.18.1
+scipy
 seaborn==0.7.1
 https://github.com/Theano/Theano/archive/master.zip
 tqdm==4.8.4
