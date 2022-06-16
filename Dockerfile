@@ -1,4 +1,4 @@
-FROM nvidia/cuda
+FROM nvidia/cuda:11.7.0-devel-ubuntu20.04
 
 
 RUN apt-get clean && apt-get update
