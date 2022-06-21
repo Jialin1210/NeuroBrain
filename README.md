@@ -14,7 +14,8 @@ cd NeuroBrain
 
 [sudo] docker build -t neurobrain:repo -f Dockerfile .
 
-[sudo] nvidia-docker run -it -p 8809:8888 -v ~/path/to/NeuroBrain:/scripts/ neurobrain:repo jupyter notebook --no-browser
+(Optional: [on server] ssh -L 8000:localhost:8809 lynn@IP)
+[sudo] nvidia-docker run -it -p 8809:8888 -v /home/lynn/NeuroBrain:/scripts/ neurobrain:repo jupyter notebook --no-browser --allow-root
 ```
 
 Open `http://localhost:8809` on your local machine.
